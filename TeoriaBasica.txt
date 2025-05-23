@@ -1,0 +1,3 @@
+Structured Query Language es un lenguaje diseñado para manipular bases de datos. 
+Nos permite acceder, organizar y analizar grandes cantidades datos. Esto lo hace con comandos directos conocidos como Queries.
+Los datos se organizan en tables, las cuales estan construidas por filas== records y columnas==fields.
