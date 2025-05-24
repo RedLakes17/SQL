@@ -1,3 +1,16 @@
 Structured Query Language es un lenguaje diseñado para manipular bases de datos. 
 Nos permite acceder, organizar y analizar grandes cantidades datos. Esto lo hace con comandos directos conocidos como Queries.
 Los datos se organizan en tables, las cuales estan construidas por filas== records y columnas==fields.
+
+Seleccionar todos los fields:
+SELECT *
+FROM tabla_seleccionada
+
+Crear un view:
+CREATE VIEW nombre_del_view AS
+SELECT fields_seleccionados
+FROM tabla_seleccionada;
+
+Consulta con alias:
+SELECT DISTINCT author AS unique_author
+FROM books;

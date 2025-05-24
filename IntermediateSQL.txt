@@ -1,0 +1,17 @@
+Todo sera con PostgeSQL.
+
+Para contar los valores de un campo:
+SELECT COUNT(field) AS alias
+FROM tabla;
+
+Para contar el numero de registros en una tabla:
+SELECT COUNT(*) AS total_records
+FROM tabla;
+
+Podemos combinar:
+SELECT COUNT(DISTINCT field) AS alias
+FROM tabla;
+
+Para varios campos:
+SELECT COUNT(DISTINCT field1) AS alias1, COUNT(DISTINCT field2) AS alias2
+FROM tabla;
