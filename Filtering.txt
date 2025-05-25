@@ -1,0 +1,33 @@
+Para filtrar podemos usar el keyword WHERE
+
+Para valores numericos:
+SELECT title
+FROM films
+WHERE release_year > 1960;
+
+Tambien puede ser usado con strings:
+SELECT title
+FROM films
+WHERE country = 'Mexico';
+
+
+
+
+Tambien podemos usar OR, AND, BETWEEN
+
+Para seleccionar registros con caractaristicas:
+SELECT *
+FROM clothes
+WHERE color= 'blue' AND length='short'
+
+Otro ejemplo:
+SELECT title
+FROM films
+WHERE (release_year =1994OR release_year =1995) 
+    AND (certification ='PG'OR certification ='R');
+
+Para usar between:
+SELECT title
+FROM films
+WHERE release_year
+    BETWEEN 1994 AND 2000;

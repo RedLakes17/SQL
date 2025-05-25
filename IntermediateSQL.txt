@@ -10,7 +10,8 @@ FROM tabla;
 
 Podemos combinar:
 SELECT COUNT(DISTINCT field) AS alias
-FROM tabla;
+FROM tabla
+LIMIT 10;
 
 Para varios campos:
 SELECT COUNT(DISTINCT field1) AS alias1, COUNT(DISTINCT field2) AS alias2
