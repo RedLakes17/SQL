@@ -1,0 +1,20 @@
+Con Agregate Functions podemos obtener resultados de varios registros. AVG(), SUM(), MIN(), MAX(), COUNT()
+
+Para calcular el promedio de un campo numerico:
+SELECT AVG(budget)
+FROM films;
+
+MIN, MAX, COUNT funcionan con non-numerical fields:
+SELECT MAX(country)
+FROM films;
+
+Tambien podemos redondear:
+SELECT ROUND(AVG(budget), 2) AS averege_budget
+FROM films;
+
+Tambien podemos usar operaciones aritmeticas:
+SELECT (gross - budget)
+FROM films;
+
+SELECT title, (duration / 60.0) AS duration_hours 
+FROM films;

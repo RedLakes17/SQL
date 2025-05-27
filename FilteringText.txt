@@ -1,0 +1,36 @@
+Usamos otros tres keywords LIKE, NOT LIKE, IN
+
+Con LIKE usamos % para encontrar caracteres faltantes:
+SELECT name
+FROM people
+WHERE name LIKE 'Ade%';
+
+Podemos hacer los mismo, pero ahora para encontrar registros que no tengan ciertos carateres:
+SELECT name
+FROM people
+WHERE name NOT LIKE 'A.%';
+
+Registro en el que la tercer letra es t:
+SELECT name
+FROM people
+WHERE name LIKE '__t%';
+
+El keyword IN nos ayuda a especificar diferentes valores para un campo:
+SELECT release_year
+FRONM films
+WHERE release_year IN (1920,1930,1940);
+
+
+
+
+Para filtrar los valores NULL
+
+Para ver que registros no tienen informacion en cierto campo:
+SELECT name
+FROM people
+WHERE birthdate IS NULL;
+
+Podemos hacer lo contrario:
+SELECT COUNT(*) AS birthdays
+FROM people
+WHERE birthdate IS NOT NULL;
