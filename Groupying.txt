@@ -1,0 +1,15 @@
+Para agrupar informacion de acuedo a un campo:
+SELECT certification, COUNT(title)
+FROM films
+GROUP BY certification;
+
+Podemos agrupar por mas de un campo:
+SELECT certification, language, COUNT(title)
+FROM films
+GROUP BY certification, language;
+
+Si queremos ordenar:
+SELECT certification, COUNT(title) AS title_count
+FROM films
+GROUP BY certification
+ORDER BY title_count;

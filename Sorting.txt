@@ -1,0 +1,20 @@
+Podemos usar ORDER BY para ordenar de acuerdo a un parametro:
+SELECT name
+FROM people
+ORDER BY age;
+
+Para ordenar de forma ascendente/descendente:
+SELECT title, budget
+FROM films
+ORDER BY budget ASC/DESC;
+
+Si tenemos valores null:
+SELECT title, budget
+FROM films
+WHERE budget IS NOT NULL 
+ORDER BY budget DESC;
+
+Podemos ordenar por mas de un campo:
+SELECT title, oscars, imdb_score
+FROM films
+ORDER BY oscars DESC, imdb_score DESC;
