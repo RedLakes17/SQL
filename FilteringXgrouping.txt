@@ -13,7 +13,7 @@ FROM films
 WHERE certification IN ('G', 'PG', 'PG-13')
 GROUP BY certification
 HAVING COUNT(title) > 500
-ORDERBY title_count DESC
+ORDER BY title_count DESC
 LIMIT 3;
 
 
