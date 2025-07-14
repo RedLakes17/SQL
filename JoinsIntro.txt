@@ -1,0 +1,41 @@
+Las inner joins unen los registros de dos tablas 
+cuando dicho registro se encuentra en ambas tamblas
+
+Supongamos que tenemos dos tablas, una de presidentes y otra de primeros ministros.
+Queremos formar una tabla que tenga a los paises que tienen ambos puestos.
+
+
+SELECT primeros_ministros.pais, primeros_ministros.continente, presidentes, primeros_ministros
+FROM presidentes
+INNER JOIN primeros_ministros
+ON presidentes.pais = primeros_ministros.pais;
+
+
+Podemos usar alias:
+SELECT p2.pais, p2.continente, pais, presidentes, primeros_ministros
+FROM presidentes AS p1
+INNER JOIN primeros_ministros AS p2
+ON p1.pais = p2.pais;   si las columnas tienen el mismo nombre USING(pais);
+
+
+
+
+Ahora veamos otros tipos de joins y relaciones que las tablas pueden tener.
+
+-One to many
+-One to One
+
+Podemos concatenar uniones
+SELECT *
+FROM left_table AS l
+INNER JOIN right_table AS r
+ON l.field1 = r.field2
+INNER JOIN another.table AS a
+ON l.algo = a.algo;
+
+Podemos limitar aun mas las joins con mas uniones
+SELECT *
+FROM left_table
+INNER JOIN right_table
+ON left_table.id = right_table.id
+    AND left_table.date = right_table.date;
