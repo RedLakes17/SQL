@@ -1,0 +1,27 @@
+Una full join incluye todos los campos y registros de ambas tablas:
+SELECT right_table.id, left_table.id
+FROM left_table
+FULL JOIN right_table
+USING(id);
+
+
+Cross joins crean todas las posibles combinaciones entre dos tablas:
+SELECT id1, id2
+FROM table1
+CROSS JOIN table2;
+
+Supongamos que queremos hacer seguimiento de reuniones entra los primeros ministros
+de asia y todos los presidentes de sedamerica, i.e. todas las posibles combinaciones 
+entre ellos:
+SELECT prime_minister, president
+FROM prime_ministers AS p1
+CROSS JOIN presidents AS p2
+WHERE p1.continent IN ('Asia') AND p2.continent IN ('South America');
+
+
+Las self joins se usan para compara valores de la misma tabla. Por ejemplo, si queremos
+hacer una tabla que combine los paises de un mismo continente:
+SELECT p1.country AS country1, p2.country AS country2, p1.continent
+FROM prime_ministers AS p1
+INNER JOIN prime_ministers AS p2
+ON p1.continent = p2.continent AND p1.country <> p2.country;

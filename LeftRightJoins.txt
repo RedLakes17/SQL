@@ -1,0 +1,14 @@
+Una left Join muestra todos los registros de la tabal izquierda añadiendo los campos
+de la tabla derecha cuyos registros tambien se encuentran en la tabla izquierda.
+
+Aqui obtenemos todos los prime_ministers y los presidents si es que tienen uno:
+SELECT p1.country, prime_minister, president
+FROM prime_ministers AS p1
+LEFT JOIN presidents AS p2 
+USING(country);
+
+Ahora una right join:
+SELECT p2.country, president, prime_minister
+FROM presidents AS p1
+RIGHT JOIN prime_ministers AS p2
+ON p1.code = p2.code;
