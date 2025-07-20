@@ -1,0 +1,34 @@
+La diferencia entre UNION y UNION ALL es que esta ultima incluye todos los registros de la 
+tabla derecha aunque estos ya se encuentren en la tabla izquierda.
+
+SELECT *
+FROM left_table
+UNION
+SELECT *
+FROM right_table;
+
+SELECT *
+FROM left_table
+UNION ALL
+SELECT *
+FROM right_table;
+
+
+Intersect devuelve solo los records presentes en ambas tablas
+
+SELECT id, val
+FROM left_table
+INTERSECT
+SELECT id, val
+FROM right_table;
+
+
+Except nos da todos los record que solo aparecen en una de las tablas
+
+Monarchs que no tienen el titulo de prime minister:
+SELECT monarch, country
+FROM Monarchs
+EXCEPT 
+SELECT prime_minister, country
+FROM prime_ministers;
+
